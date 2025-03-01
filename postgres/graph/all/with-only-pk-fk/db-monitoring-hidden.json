@@ -1,0 +1,198 @@
+	"hidden":[
+		{
+			"tableName" : "ami",
+			"columns" : ["id","virtualization_type","description","hypervisor","ena_support","image_id","state","device_name","snap_shot_id","delete_on_termination","volume_type","volume_size","encrypted","architecture","image_location","root_device_type","owner_id","root_device_name","creation_date","public","image_type","name"]
+		},
+		{
+			"tableName" : "bucket",
+			"columns" : ["id","creation_date","name"]
+		},
+		{
+			"tableName" : "db_instance",
+			"columns" : ["id","db_instance_identifier","db_instance_class","engine","db_instance_status","master_username","db_name","endpoint_address","endpoint_port","endpoint_hosted_zone_id","allocated_storage","instance_create_time","preferred_backup_window","backup_retention_period","availability_zone","preferred_maintenance_window","pending_modified_values_db_instance_class","pending_modified_values_allocated_storage","pending_modified_values_master_user_password","pending_modified_values_port","pending_modified_values_backup_retention_period","pending_modified_values_multi_az","pending_modified_values_engine_version","pending_modified_values_license_model","pending_modified_values_iops","pending_modified_values_db_instance_identifier","pending_modified_values_storage_type","pending_modified_values_ca_certificate_identifier","pending_modified_values_db_subnet_group_name","latest_restorable_time","multi_az","engine_version","auto_minor_version_upgrade","read_replica_source_db_instance_identifier","license_model","iops","character_set_name","secondary_availability_zone","publicly_accessible","storage_type","tde_credential_arn","db_instance_port","db_cluster_identifier","storage_encrypted","kms_key_id","db_i_resource_id","ca_certificate_identifier","copy_tags_to_snapshot","monitoring_interval","enhanced_monitoring_resource_arn","monitoring_role_arn","promotion_tier","db_instance_arn","timezone","iam_database_authentication_enabled","performance_insights_enabled","performance_insights_kms_key_id","performance_insights_retention_period","deletion_protection","listener_endpoint_address","listener_endpoint_port","listener_endpoint_hosted_zone_id","max_allocated_storage"]
+		},
+		{
+			"tableName" : "db_instance_associated_roles",
+			"columns" : ["id","db_instance_id","role_arn","feature_name","status"]
+		},
+		{
+			"tableName" : "db_instance_db_parameter_groups",
+			"columns" : ["id","db_instance_id","db_parameter_group_name","parameter_apply_status"]
+		},
+		{
+			"tableName" : "db_instance_db_security_groups",
+			"columns" : ["id","db_instance_id","db_security_group_name","status"]
+		},
+		{
+			"tableName" : "db_instance_db_subnet_group",
+			"columns" : ["id","db_instance_id","db_subnet_group_name","db_subnet_group_description","vpc_id","subnet_group_status","db_subnet_group_arn"]
+		},
+		{
+			"tableName" : "db_instance_db_subnet_group_subnet",
+			"columns" : ["id","db_instance_db_subnet_group_id","subnet_identifier","name","subnet_status"]
+		},
+		{
+			"tableName" : "db_instance_domain_memberships",
+			"columns" : ["id","db_instance_id","domain","status","fqdn","iam_role_name"]
+		},
+		{
+			"tableName" : "db_instance_option_group_memberships",
+			"columns" : ["id","db_instance_id","option_group_name","status"]
+		},
+		{
+			"tableName" : "db_instance_processor_features",
+			"columns" : ["id","db_instance_id","name","value"]
+		},
+		{
+			"tableName" : "db_instance_status_infos",
+			"columns" : ["id","db_instance_id","status_type","normal","status","message"]
+		},
+		{
+			"tableName" : "db_instance_vpc_security_groups",
+			"columns" : ["id","db_instance_id","vpc_security_group_id","satus"]
+		},
+		{
+			"tableName" : "instance",
+			"columns" : ["id","reservation_id","ami_launch_index","image_id","instance_id","instance_type","kernel_id","key_name","launch_time","monitoring_state","placement_availability_zone","placement_affinity","placement_group_name","placement_partition_number","placement_host_id","placement_tenancy","placement_spread_domain","platform","private_dns_name","private_ip_address","public_dns_name","public_ip_address","ramdisk_id","state_code","state_name","state_transition_reason","subnet_id","vpc_id","architecture","client_token","ebs_optimized","ena_support","hypervisor","iam_instance_profile_id","iam_instance_profile_arn","instance_lifecycle","root_device_name","root_device_type","source_dest_check","spot_instance_request_id","sriov_net_support","state_reason_code","state_reason_message","virtualization_type","cpu_option_core_count","cpu_option_threads_per_core","capacity_reservation_id","capacity_reservation_preference","capacity_reservation_target_id","hibernation_options_configured"]
+		},
+		{
+			"tableName" : "instance_block_device_mapping",
+			"columns" : ["id","instance_id","device_name","ebs_attach_time","ebs_delete_on_termination","ebs_status","ebs_volume_id"]
+		},
+		{
+			"tableName" : "instance_elastic_gpu_association",
+			"columns" : ["id","instance_id","elastic_gpu_id","elastic_gpu_association_id","elastic_gpu_association_state","elastic_gpu_association_time"]
+		},
+		{
+			"tableName" : "instance_elastic_inference_accelerator_association",
+			"columns" : ["id","instance_id","elasticinference_accelerator_arn","elasticinference_accelerator_association_id","elasticinference_accelerator_association_state","elasticinference_accelerator_association_time"]
+		},
+		{
+			"tableName" : "instance_license",
+			"columns" : ["id","instance_id","license_configuration_arn"]
+		},
+		{
+			"tableName" : "instance_network_interface",
+			"columns" : ["id","instance_id","association_ip_owner_id","association_public_dns_name","association_public_ip","attachment_attach_time","attachment_attachment_id","attachment_delete_on_termination","attachment_device_index","attachment_status","description","mac_address","network_interface_id","owner_id","private_dns_name","private_ip_address","source_dest_check","status","subnet_id","vpc_id","interface_type"]
+		},
+		{
+			"tableName" : "instance_network_interface_group",
+			"columns" : ["id","instance_network_interface_id","group_name","group_id"]
+		},
+		{
+			"tableName" : "instance_network_interface_private_ip_address",
+			"columns" : ["id","instance_network_interface_id","association_ip_owner_id","association_public_dns_name","association_public_ip","is_primary","private_dns_name","private_ip_address"]
+		},
+		{
+			"tableName" : "instance_product_code",
+			"columns" : ["id","instance_id","product_code_id","product_code_type"]
+		},
+		{
+			"tableName" : "instance_security_group",
+			"columns" : ["id","instance_id","group_name","group_id"]
+		},
+		{
+			"tableName" : "instance_tag",
+			"columns" : ["id","instance_id","key","value"]
+		},
+		{
+			"tableName" : "load_balancer",
+			"columns" : ["id","load_balancer_arn","dns_name","canonical_hosted_zone_id","created_time","load_balancer_name","scheme","vpc_id","state_code","state_reason","type","ip_address_type"]
+		},
+		{
+			"tableName" : "load_balancer_availability_zone",
+			"columns" : ["id","load_balancer_id","zone_name","subnet_id"]
+		},
+		{
+			"tableName" : "load_balancer_availability_zone_load_balancer_address",
+			"columns" : ["id","load_balancer_availability_zone_id","ip_address","allocation_id"]
+		},
+		{
+			"tableName" : "load_balancer_security_group",
+			"columns" : ["id","load_balancer_id","security_group_id"]
+		},
+		{
+			"tableName" : "reservation",
+			"columns" : ["id","owner_id","requester_id","reservation_id"]
+		},
+		{
+			"tableName" : "reservation_group",
+			"columns" : ["id","reservation_id","group_name","group_id"]
+		},
+		{
+			"tableName" : "security_group",
+			"columns" : ["id","description","group_name","vpc_id","owner_id","group_id"]
+		},
+		{
+			"tableName" : "security_group_ip_permissions",
+			"columns" : ["id","security_group_id","from_port","ip_protocol","to_port"]
+		},
+		{
+			"tableName" : "security_group_ip_permissions_egress",
+			"columns" : ["id","security_group_id","from_port","ip_protocol","to_port"]
+		},
+		{
+			"tableName" : "security_group_ip_permissions_egress_ip_ranges",
+			"columns" : ["id","security_group_ip_permissions_egress_id","cidr_ip","description"]
+		},
+		{
+			"tableName" : "security_group_ip_permissions_egress_prefix_list_ids",
+			"columns" : ["id","security_group_ip_permissions_egress_id","description","prefix_list_id"]
+		},
+		{
+			"tableName" : "security_group_ip_permissions_egress_user_id_group_pairs",
+			"columns" : ["id","security_group_ip_permissions_egress_id","description","group_id","group_name","peering_status","user_id","vpc_id","vpc_peering_connection_id"]
+		},
+		{
+			"tableName" : "security_group_ip_permissions_ip_ranges",
+			"columns" : ["id","security_group_ip_permissions_id","cidr_ip","description"]
+		},
+		{
+			"tableName" : "security_group_ip_permissions_prefix_list_ids",
+			"columns" : ["id","security_group_ip_permissions_id","description","prefix_list_id"]
+		},
+		{
+			"tableName" : "security_group_ip_permissions_user_id_group_pairs",
+			"columns" : ["id","security_group_ip_permissions_id","description","group_id","group_name","peering_status","user_id","vpc_id","vpc_peering_connection_id"]
+		},
+		{
+			"tableName" : "security_group_tag",
+			"columns" : ["id","security_group_id","key","value"]
+		},
+		{
+			"tableName" : "stack",
+			"columns" : ["id","stack_id","stack_name","change_set_id","description","creation_time","deletion_time","last_update_time","stack_status","stack_status_raison","disable_rollback","timeout_in_minutes","role_arn","enable_termination_protection","parent_id","root_id","next_token"]
+		},
+		{
+			"tableName" : "stack_output",
+			"columns" : ["id","stack_id","output_key","output_value","description","export_name"]
+		},
+		{
+			"tableName" : "stack_parameter",
+			"columns" : ["id","stack_id","parameter_key","parameter_value","use_previous_value","resolved_value"]
+		},
+		{
+			"tableName" : "stack_tag",
+			"columns" : ["id","stack_id","key","value"]
+		},
+		{
+			"tableName" : "subnet",
+			"columns" : ["id","ref_vpc_id","subnet_id","map_public_at_launch","availability_zone_id","name","cloudformation_stack_name","available_ip_address_count","state","availability_zone","owner_id","cidr_block"]
+		},
+		{
+			"tableName" : "volume",
+			"columns" : ["id","availability_zone","encrypted","volume_type","volume_id","state","iops","snap_shot_id","create_time","size"]
+		},
+		{
+			"tableName" : "volume_attachment",
+			"columns" : ["id","volume_id","attach_time","instance_id","state","delete_on_termination","device"]
+		},
+		{
+			"tableName" : "volume_tag",
+			"columns" : ["id","volume_id","key","value"]
+		},
+		{
+			"tableName" : "vpc",
+			"columns" : ["id","vpc_id","vpc_name","cidr_association_id","cidr_block","cidr_block_state","vpc_state","owner_id"]
+		},
+	]

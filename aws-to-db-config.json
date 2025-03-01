@@ -1,0 +1,393 @@
+{
+	"db" : {
+		"login":"LOGIN",
+		"password":"PASSWORD",
+		"host":"HOST",
+		"port":5432,
+		"parameters":"sslmode=disable",
+		"db":"DB_NAME"
+	} ,
+	"commands" : [
+		{ 
+			"name" : "vpc",
+			"cmd" : "command-vpc.sh"
+		} ,
+		{
+			"name" : "subnets",
+			"cmd" : "command-subnets.sh"
+		} ,
+		{
+			"name" : "buckets",
+			"cmd" : "command-buckets.sh"
+		} ,
+		{
+			"name" : "amis",
+			"cmd" : "command-ami.sh"
+		} ,
+		{
+			"name" : "stacks",
+			"cmd" : "command-stacks.sh"
+		} ,
+		{
+			"name" : "volumes",
+			"cmd" : "command-volumes.sh"
+		} ,
+		{
+			"name" : "snapshots",
+			"cmd" : "command-snapshots.sh"
+		} ,
+		{
+			"name" : "security_groups",
+			"cmd" :  "command-security-groups.sh"
+		} ,
+		{
+			"name" : "db_instances" ,
+			"cmd" : "command-rds.sh"
+		} ,
+		{
+			"name" : "instances",
+			"cmd" : "command-instances.sh"
+		} ,
+		{
+			"name" : "load_balancers",
+			"cmd" : "command-load-balancers.sh"
+		} ,
+		{
+			"name" : "load_balancers_target_groups",
+			"cmd" : "command-load-balancers-target-groups.sh"
+		} ,		
+		{
+			"name" : "auto_scaling_groups",
+			"cmd" : "command-auto-scaling-groups.sh"
+		} ,
+		{
+			"name" : "auto_scaling_activities",
+			"cmd" : "command-auto-scaling-activities.sh"
+		}
+	] ,
+	"graphConfig" : [
+		{
+			"name" : "bastion-admin-1",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "bastion-admin"
+				} , {
+					"key" : "shape" ,
+					"value" : "house"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 1
+		},
+		{
+			"name" : "bastion-admin-2",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "bastion-admin"
+				} , {
+					"key" : "shape" ,
+					"value" : "house"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 1
+		},
+		{
+			"name" : "bastion-admin-vpn-1",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "bastion-admin-vpn"
+				} , {
+					"key" : "shape" ,
+					"value" : "house"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 1
+		},
+		{
+			"name" : "bastion-admin-vpn-2",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "bastion-admin-vpn"
+				} , {
+					"key" : "shape" ,
+					"value" : "house"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 1
+		},
+		{
+			"name" : "ELBDealsFrontend",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "DealsFrontend"
+				} , {
+					"key" : "shape" ,
+					"value" : "ellipse"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 2
+		},
+		{
+			"name" : "ELBZendeskFrontend",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "ZendeskFrontend"
+				} , {
+					"key" : "shape" ,
+					"value" : "ellipse"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 2
+		},
+		{
+			"name" : "ELBBackOfficeFrontend",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "BackOfficeFrontend"
+				} , {
+					"key" : "shape" ,
+					"value" : "ellipse"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 2
+		},
+		{
+			"name" : "ELBPartFrontend",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "PartenairesFrontend"
+				} , {
+					"key" : "shape" ,
+					"value" : "ellipse"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 2
+		},
+		{
+			"name" : "ELBDealsBackend",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "DealsBackend"
+				} , {
+					"key" : "shape" ,
+					"value" : "diamond"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 3
+		},
+		{
+			"name" : "ELBBackOfficeBackend",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "BackOfficeBackend"
+				} , {
+					"key" : "shape" ,
+					"value" : "diamond"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 3
+		},
+		{
+			"name" : "ELBZendeskBackend",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "ZendeskBackend"
+				} , {
+					"key" : "shape" ,
+					"value" : "diamond"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 3
+		},
+		{
+			"name" : "ELBPartenairesBackend",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "PartenairesBackend"
+				} , {
+					"key" : "shape" ,
+					"value" : "diamond"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 3
+		},
+		{
+			"name" : "ELBFilerBackend",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "FilerBackend"
+				} , {
+					"key" : "shape" ,
+					"value" : "hexagon"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 4
+		},
+		{
+			"name" : "ELBCypheringBackend",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "CypheringBackend"
+				} , {
+					"key" : "shape" ,
+					"value" : "hexagon"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 4
+		},
+		{
+			"name" : "ELBGatewayBackend",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "GatewayBackend"
+				} , {
+					"key" : "shape" ,
+					"value" : "hexagon"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 4
+		},
+		{
+			"name" : "peersdbdeals",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "db-deals"
+				} , {
+					"key" : "shape" ,
+					"value" : "octagon"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 5
+		},
+		{
+			"name" : "peersdbothers",
+			"properties" : [
+				{
+					"key" : "label" ,
+					"value" : "db-others"
+				} , {
+					"key" : "shape" ,
+					"value" : "octagon"
+				} , {
+					"key" : "fontname" ,
+					"value" : "Helvetica"
+				} , {
+					"key" : "fontsize" ,
+					"value" : "10"
+				} 
+			],
+			"rank" : 5
+		}
+	]
+}
